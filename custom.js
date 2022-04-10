@@ -1,24 +1,64 @@
-var nota = 3;
+var a = 10;
+var b = 12;
+var c = 15;
+var e = 10;
 
-if (nota >= 7) {
-    document.write("Aprovado: " + nota + "<br>");
-} else if ((nota < 7) && (nota >= 4)) {
-    document.write("Recuperação: " + nota + "<br>");
+if (a == "10") {
+    document.write("(==) O valor " + a + " é igual a 10! <br>");
 } else {
-    document.write("Reprovado: " + nota + "<br>");
+    document.write("(==) O valor " + a + " não é igual a 10! <br>");
 }
 
-// Nota maior ou igual a 7 - Aprovado
-// Nota menor que 7 e a nota maior que 4 - Recuperação
-// Nota menor que 4 - Reprovado
-
-var sol = true;
-var nublado = false;
-
-if (sol) {
-    document.write("Vamos para a praia porque está sol! <br>");
-} else if (nublado) {
-    document.write("Vamos para o parque! <br>");
+if (a === "10") {
+    document.write("(===) O valor " + a + " é idêntico a 10! <br>");
 } else {
-    document.write("Vamos ficar em casa estudando JavaScript! <br>");
+    document.write("(===) O valor " + a + " não é idêntico a 10! <br>");
+}
+
+if (a != "10") {
+    document.write("(!=) O valor " + a + " é diferente a 10! <br>");
+} else {
+    document.write("(!=) O valor " + a + " não é diferente a 10! <br>");
+}
+
+if (a !== "10") {
+    document.write("(!==) O valor " + a + " não é idêntico a 10! <br>");
+} else {
+    document.write("(!==) O valor " + a + " é idêntico a 10! <br>");
+}
+
+if (c > b) {
+    document.write("(>) O valor " + c + " é maior que " + b + "!<br>");
+} else {
+    document.write("(>) O valor " + c + " é menor que " + b + "!<br>");
+}
+
+if (a < b) {
+    document.write("(<) O valor " + a + " é menor que " + b + "!<br>");
+} else {
+    document.write("(<) O valor " + a + " é maior que " + b + "!<br>");
+}
+
+if (a >= e) {
+    document.write("(>=) O valor " + a + " é maior ou igual a" + e + "!<br>");
+} else {
+    document.write("(>=) O valor " + a + " não é maior também não é igual a " + e + "!<br>");
+}
+
+if (a <= e) {
+    document.write("(<=) O valor " + a + " é menor ou igual a" + e + "!<br>");
+} else {
+    document.write("(<=) O valor " + a + " não é menor também não é igual a " + e + "!<br>");
+}
+
+if ((a == 11) && (b == 12)) {
+    document.write("(&&) O valor " + a + " é igual a 11 e o valor " + b + " é igual a 12! <br>");
+} else {
+    document.write("(&&) As duas condições não são verdadeiras, o valor " + a + " não é igual a 11 ou o valor " + b + " não é igual a 12! <br>");
+}
+
+if ((a == 11) || (b == 12)) {
+    document.write("(||) O valor " + a + " é igual a 11 ou o valor " + b + " é igual a 12! <br>");
+} else {
+    document.write("(||) Nenhuma das duas condições são verdadeiras, o valor " + a + " não é igual a 11 é o valor " + b + " não é igual a 12! <br>");
 }
