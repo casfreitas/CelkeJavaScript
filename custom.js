@@ -1,26 +1,24 @@
-function nome_funcao() {
-    alert("Login ou senha incorreta");
+var nota = 3;
+
+if (nota >= 7) {
+    document.write("Aprovado: " + nota + "<br>");
+} else if ((nota < 7) && (nota >= 4)) {
+    document.write("Recuperação: " + nota + "<br>");
+} else {
+    document.write("Reprovado: " + nota + "<br>");
 }
 
-function somar(a, b) {
-    var total = a + b;
-    alert("Valor da soma " + total);
+// Nota maior ou igual a 7 - Aprovado
+// Nota menor que 7 e a nota maior que 4 - Recuperação
+// Nota menor que 4 - Reprovado
+
+var sol = true;
+var nublado = false;
+
+if (sol) {
+    document.write("Vamos para a praia porque está sol! <br>");
+} else if (nublado) {
+    document.write("Vamos para o parque! <br>");
+} else {
+    document.write("Vamos ficar em casa estudando JavaScript! <br>");
 }
-
-function desconto(a, b) {
-    var totalDesc = a - b;
-    return totalDesc;
-}
-var resultTotalDesc = desconto(7, 5);
-document.write("Valor final com desconto: " + resultTotalDesc + "<br>");
-
-
-// Usando Arrow Functions
-const soma = (numero1, numero2) => numero1 + numero2;
-document.write("Valor da soma: " + soma(300, 400) + "<br>");
-
-// Se for preciso usar mais de uma linha, usar parenteses
-const total = (numero1, numero2) => {
-    return numero1 + numero2;
-}
-document.write("Valor datoal: " + total(300, 700) + "<br>");
