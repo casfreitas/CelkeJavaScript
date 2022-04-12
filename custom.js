@@ -1,25 +1,38 @@
-var inicio = 1;
+/****************** FOR basico *******************/
+var total = 0;
+var resultadoA = "";
 
-while (inicio <= 10) {
-    document.write("Número do cliente: " + inicio + "<br>");
-    inicio++;
+for (let i = 1; i <= 5; i++) {
+    //document.write("Valor da variável i: " + i + "<br>");
+    resultadoA += "Valor da variável i: " + i + "<br>";
 }
+//console.log(resultadoA);
+// Enviar os dados para o arquivo index.html
+document.getElementById("listar").innerHTML = resultadoA;
 
-var prestacao = 1;
-var qnt_prestacoes = 12;
 
-// DO WHILE Executa ao menos 1 vez
-do {
-    document.write("Número da prestações: " + prestacao + "<br>");
-    prestacao++;
-} while (prestacao <= qnt_prestacoes)
+/************** Ler o array com FOR *****************/
+// Listar os produtos que estao no array
+var carrinho = new Array();
+carrinho[0] = ["Curso de PHP Developer", 329, 1];
+carrinho[1] = ["Curso de Node.js, React e React Native", 439, 1];
+console.log(carrinho);
+var resultadoB = "";
+for (let i = 0; i < carrinho.length; i++) {
+    resultadoB += "Nome do produto: " + carrinho[i][0] + " - Preço do produto: R$ " + carrinho[i][1] + " - Quantidade: " + carrinho[i][2] + "<br>";
+}
+//console.log(resultadoB);
+// Enviar os dados para o arquivo index.html
+document.getElementById("listar-produtos").innerHTML = resultadoB;
 
-var num_prestacao = 1;
-var num_qnt_prestacoes = 4;
-var total = 120;
-var valor_prestacao = total / num_qnt_prestacoes;
 
-do {
-    document.write("Número da prestação: " + num_prestacao + " valor " + valor_prestacao + "<br>");
-    num_prestacao++;
-} while (num_prestacao <= num_qnt_prestacoes)
+/************** Ler o objeto com FOR *****************/
+// Listar as caracteristicas do imovel que esta no objeto
+var imovel = { tipo: 'Tipo de Imóvel - Casa', dormitorios: 'Nº de dormitórios - 3', mobiliado: 'Mobiliado - não' };
+for (let caracteristica in imovel) {
+    // Enviar somente uma caracteristca do imovel para o arquivo index.html
+    //document.getElementById('listar-caract-imovel').innerHTML = imovel[caracteristica] + "<br>";
+
+    // Enviar os dados para o arquivo index.html, acrescentar no final da lista novo registro
+    document.getElementById('listar-caract-imovel').insertAdjacentHTML('beforeend', imovel[caracteristica] + "<br>");
+}
