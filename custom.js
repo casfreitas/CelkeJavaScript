@@ -1,38 +1,40 @@
-/****************** FOR basico *******************/
-var total = 0;
-var resultadoA = "";
+// Enviar os dados para o arquivo index.html utilizando o atributo ID
+// document - Document representa qualquer pagina da web carregada no navegador
+// getElementByid("nome-usuario") - Retorna o seletor que possui o atributo ID
+// Apropriedade innerHTML define ou obtém a sintaxe HTML
+document.getElementById("nome-usuario").innerHTML = "<p style='color: green'>Cesar</p>";
 
-for (let i = 1; i <= 5; i++) {
-    //document.write("Valor da variável i: " + i + "<br>");
-    resultadoA += "Valor da variável i: " + i + "<br>";
-}
-//console.log(resultadoA);
-// Enviar os dados para o arquivo index.html
-document.getElementById("listar").innerHTML = resultadoA;
+// Enviar os dados para o arquivo index.html utilizando o atributo Class
+// document - Document representa qualquer pagina da web carregada no navegador
+// getElementsByClassName("turma-usuario")[0] - Retorna o seletor que possui o atributo Class, primeira ocorrencia do seletor
+// Apropriedade innerHTML define ou obtém a sintaxe HTML
+document.getElementsByClassName("turma-usuario")[0].innerHTML = "<p style='color: #8a2be2'>Curso de PHP Developer</p>";
 
-
-/************** Ler o array com FOR *****************/
-// Listar os produtos que estao no array
-var carrinho = new Array();
-carrinho[0] = ["Curso de PHP Developer", 329, 1];
-carrinho[1] = ["Curso de Node.js, React e React Native", 439, 1];
-console.log(carrinho);
-var resultadoB = "";
-for (let i = 0; i < carrinho.length; i++) {
-    resultadoB += "Nome do produto: " + carrinho[i][0] + " - Preço do produto: R$ " + carrinho[i][1] + " - Quantidade: " + carrinho[i][2] + "<br>";
-}
-//console.log(resultadoB);
-// Enviar os dados para o arquivo index.html
-document.getElementById("listar-produtos").innerHTML = resultadoB;
+// Enviar os dados para o arquivo index.html utilizando o atributo Class
+// document - Document representa qualquer pagina da web carregada no navegador
+// getElementsByClassName("turma-usuario")[1] - Retorna o seletor que possui o atributo Class, primeira ocorrencia do seletor
+// Apropriedade innerHTML define ou obtém a sintaxe HTML
+document.getElementsByClassName("turma-usuario")[1].innerHTML = "<p style='color: #800000'>Turma 4</p>";
 
 
-/************** Ler o objeto com FOR *****************/
-// Listar as caracteristicas do imovel que esta no objeto
-var imovel = { tipo: 'Tipo de Imóvel - Casa', dormitorios: 'Nº de dormitórios - 3', mobiliado: 'Mobiliado - não' };
-for (let caracteristica in imovel) {
-    // Enviar somente uma caracteristca do imovel para o arquivo index.html
-    //document.getElementById('listar-caract-imovel').innerHTML = imovel[caracteristica] + "<br>";
+// Enviar os dados para o arquivo index.html utilizando o atributo indicado, neste exemplo "." o class: querySelect(".modulo")
+// document - Document representa qualquer pagina da web carregada no navegador
+// querySelector(".modulo") - Retorna o seletor que possui o atributo Class
+// Apropriedade innerHTML define ou obtém a sintaxe HTML
+document.querySelector(".modulo").innerHTML = "<p style='color: #8a2be2'>PHP</p>";
 
-    // Enviar os dados para o arquivo index.html, acrescentar no final da lista novo registro
-    document.getElementById('listar-caract-imovel').insertAdjacentHTML('beforeend', imovel[caracteristica] + "<br>");
+// Enviar os dados para o arquivo index.html utilizando o atributo indicado, neste exemplo "#" o ID: querySelect(".qnt-aula-visualisada")
+// document - Document representa qualquer pagina da web carregada no navegador
+// querySelector(".qnt-aula-visualisada") - Retorna o seletor que possui o atributo ID
+// Apropriedade innerHTML define ou obtém a sintaxe HTML
+document.querySelector("#qnt-aula-visualisada").innerHTML = "<p style='color: #dc143c'>7 aula</p>";
+
+// Enviar os dados para o arquivo index.html utilizando o atributo indicado, neste exemplo "#" o ID: querySelect("#sit-inscricao")
+// document - Document representa qualquer pagina da web carregada no navegador
+// querySelector("#sit-inscricao") - Retorna o seletor que possui o atributo ID
+// Apropriedade innerHTML define ou obtém a sintaxe HTML
+var sitInscricao = document.querySelector("#sit-inscricao");
+if (sitInscricao) {
+    sitInscricao.innerHTML = "<p style='color: green;'>Pago</p>";
+    //document.querySelector("#sit-inscricao").innerHTML = "<p style='color: #dc143c;'>Cancelado</p>";
 }
